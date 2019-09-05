@@ -7,11 +7,10 @@ using System.Threading.Tasks;
 namespace OOPs_Review
 {
     class Program
-    {
-       
+    {  
         static void Main(string[] args)
         {
-        
+            
         }
     }
 }
