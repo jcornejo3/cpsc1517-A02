@@ -101,5 +101,26 @@ namespace OOPs_Review
         //However, if the numeric needs additional checking, then you should consider using a fully implemented property.
 
         public double? Price { get; set; }//  the '?' means that it is nullable
+
+        //Constructors
+
+        //default
+        public FencePanel()
+        {
+
+        }
+
+        //greedy constructor
+        //list of parameters representing each posible data value in your 
+        // class (properties);
+
+        public FencePanel(double height, double width, string style, double? price)
+        {
+            Height = height;
+            Width = width;
+            Price = price;
+            Style = style;
+            //these are constructors
+        }
     }
 }
