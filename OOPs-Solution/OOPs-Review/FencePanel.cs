@@ -29,5 +29,77 @@ namespace OOPs_Review
         //      the system will manage
 
         public double Height { get; set; }
+        //public double Width { get; set; }
+
+        //--Fully implemented property
+        // a private data member WILL be coded for use for this property
+        // typically, the incomoing data need additional processing
+        // such as validation
+        // Example: the characteristic is a string that can be null(0) or requires atleast one character (that is the string
+        // can not be empty)
+
+        private string _Style;
+        private double _Width;
+        public string Style
+        {
+            get
+            {
+                return _Style;// if "return Style(no underscore)" is in this line, the program will loop. you know why.
+            }
+            set
+            {
+                try
+                {
+                    if(string.IsNullOrEmpty(value))
+                    {
+                        _Style = null;
+                    }
+                    else
+                    {
+                        _Style = value;
+                    }
+                }
+                catch (Exception e)
+                {
+
+                    Console.WriteLine(e.Message);
+                    Console.ReadKey();
+                }
+                
+            }
+        }
+        public double Width
+        {
+            get
+            {
+                return _Width;
+            }
+            set
+            {
+                try
+                {
+                    if(value > 0.0)
+                    {
+                        new Exception("width can not be 0 or less than 0");
+                    }
+                    else
+                    {
+                        _Width = value;
+                    }
+                }
+                catch (Exception e)
+                {
+
+                    Console.WriteLine(e.Message);
+                }
+            }
+            
+        }
+
+        //does a nullable non-string data value need a fully implemented property?
+        // NO. a nullable numeric(can be empty) will either be given a numeric value or null(none).
+        //However, if the numeric needs additional checking, then you should consider using a fully implemented property.
+
+        public double? Price { get; set; }//  the '?' means that it is nullable
     }
 }
