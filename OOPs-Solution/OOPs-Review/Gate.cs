@@ -52,11 +52,11 @@ namespace OOPs_Review
                 {
                     if (value > 0.0)
                     {
-                        new Exception("width can not be 0 or less than 0");
+                        _Width = value;
                     }
                     else
                     {
-                        _Width = value;
+                        new Exception("width can not be 0 or less than 0");    
                     }
                 }
                 catch (Exception e)
@@ -67,12 +67,32 @@ namespace OOPs_Review
             }
 
         }
-        public double? Price { get; set; }
+        private double _Price;
+        public double Price
+        {
+            get
+            {
+                return _Price;
+            }
+            set
+            {
+                if(value > 0.0)
+                {
+                    _Width = value;
+                }
+                else
+                {
+                    new Exception("Width can not be 0 or less");
+                }
+
+            }
+        }
+
         public Gate()
         {
 
         }
-        public Gate(double height, double width, string style, double? price)
+        public Gate(double height, double width, string style, double price)
         {
             Height = height;
             Width = width;
@@ -85,7 +105,8 @@ namespace OOPs_Review
         public double GateArea(double linearlegnth)
         {
             //property Heights is auto implemented, there is no choice
-            return linearlegnth * Height;
+            return Width * Height;
         }
+
     }
 }

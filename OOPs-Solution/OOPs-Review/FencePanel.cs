@@ -10,7 +10,7 @@ namespace OOPs_Review
     //if an outside user of this class wanted access to the
     //class contents, then the class permisions must be public
 
-    public class Gate
+    public class FencePanel
     {
         //properties
         //property is associated with a single piece of data
@@ -105,7 +105,7 @@ namespace OOPs_Review
         //Constructors
 
         //default
-        public Gate()
+        public FencePanel()
         {
 
         }
@@ -114,7 +114,7 @@ namespace OOPs_Review
         //list of parameters representing each posible data value in your 
         // class (properties);
 
-        public Gate(double height, double width, string style, double? price)
+        public FencePanel(double height, double width, string style, double? price)
         {
             Height = height;
             Width = width;
