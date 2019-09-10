@@ -10,7 +10,7 @@ namespace OOPs_Review
     //if an outside user of this class wanted access to the
     //class contents, then the class permisions must be public
 
-    public class FencePanel
+    public class Gate
     {
         //properties
         //property is associated with a single piece of data
@@ -105,7 +105,7 @@ namespace OOPs_Review
         //Constructors
 
         //default
-        public FencePanel()
+        public Gate()
         {
 
         }
@@ -114,7 +114,7 @@ namespace OOPs_Review
         //list of parameters representing each posible data value in your 
         // class (properties);
 
-        public FencePanel(double height, double width, string style, double? price)
+        public Gate(double height, double width, string style, double? price)
         {
             Height = height;
             Width = width;
@@ -122,5 +122,24 @@ namespace OOPs_Review
             Style = style;
             //these are constructors
         }
+
+        //Behaviours
+        //a.k.a a method
+        public double EstematedNumberOfPanels(double linearlegnth)
+        {
+            //you could use either the property Width OR the private data member "_Width"
+            //Using the property ensure all validation or excess logic is in play
+
+            double numberofpanels = linearlegnth / Width; //or property Width
+            return numberofpanels;
+        }
+
+        public double FenceArea(double linearlegnth)
+        {
+            //property Heights is auto implemented, there is no choice
+            return linearlegnth * Height; 
+        }
+
+        //
     }
 }
