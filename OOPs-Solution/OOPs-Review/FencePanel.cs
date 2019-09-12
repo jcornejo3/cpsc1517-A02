@@ -78,13 +78,14 @@ namespace OOPs_Review
             {
                 try
                 {
-                    if(value > 0.0)
+                    if(value <= 0.0)
                     {
-                        new Exception("width can not be 0 or less than 0");
+                        _Width = value;
+                       
                     }
                     else
                     {
-                        _Width = value;
+                        new Exception("width can not be 0 or less than 0");
                     }
                 }
                 catch (Exception e)
