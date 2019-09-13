@@ -6,10 +6,21 @@ using System.Threading.Tasks;
 
 namespace OOPs_Review
 {
+    class ConsoleController
+    {
+        public static void background()
+        {
+            
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Black;
+        }
+    }
     class Program
     {  
         static void Main(string[] args)
         {
+            ConsoleController.background();
             //know how to do data inpt into a console application
             double linearLength = 135.0;
             double height = 6.5;
@@ -85,6 +96,19 @@ namespace OOPs_Review
             ClientEstimate.CalculatePrice();
 
             //output client information
+            Console.WriteLine($"The Fence is to be a {ClientEstimate.Panel.Style} style.");
+            Console.Write($"The Linear Fence Length require is {ClientEstimate.LinearLegnth}");
+            Console.Write($"\nNumber of required panels: {ClientEstimate.Panel.EstematedNumberOfPanels(ClientEstimate.LinearLegnth)}");
+            Console.WriteLine($"\nNumber of required gates {ClientEstimate.Gates.Count}");
+            double fenceArea = ClientEstimate.Panel.FenceArea(ClientEstimate.LinearLegnth);
+            foreach (var item in ClientEstimate.Gates)
+            {
+                fenceArea += item.GateArea();
+            }
+            Console.WriteLine(string.Format("Total Fence surface area {0:0.00}", fenceArea * 2));
+            Console.ReadKey();
+
+
 
 
 

@@ -102,7 +102,7 @@ namespace OOPs_Review
         }
 
         
-        public double GateArea(double linearlegnth)
+        public double GateArea()
         {
             //property Heights is auto implemented, there is no choice
             return Width * Height;
