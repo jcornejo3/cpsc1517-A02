@@ -121,6 +121,8 @@
     <Content Include="Scripts\BasicForm.cshtml" />
     <Content Include="ContentPage1.cshtml" />
     <Content Include="basic.cshtml" />
+    <Content Include="RadioButton.cshtml" />
+    <Content Include="CheckBox.cshtml" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />

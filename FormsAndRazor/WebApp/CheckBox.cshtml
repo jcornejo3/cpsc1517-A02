@@ -1,0 +1,63 @@
+﻿@{
+    Layout = "~/_Layout1.cshtml";
+    Page.Title = string.Format("Razor - {0}", "CheckBoxes");
+    string gamegroup = "";
+}
+
+@section banner{
+    <h1>CheckBoxButtons on form</h1>
+}
+@if (IsPost)
+{
+    var theButton = Request.Form["TheButton"];
+    gamegroup = Request.Form["GameGroup"];
+    if (theButton.Equals("Clear"))
+    {
+        gamegroup = "";
+    }
+    if (gamegroup.IsEmpty())
+    {
+        <p>Please Select atleast one</p>
+    }
+    else
+    {
+       
+        <p>
+            I see you're interested in these:
+            <ul>
+                @foreach (var platform in gamegroup.Split(','))
+{
+                    <li>@platform</li>
+}
+            </ul>
+            So Gey
+        </p>
+        
+
+    }
+}
+else
+{
+
+}
+
+
+<form id="theform" method="post">
+    <div class="row">
+        <div class="offset-1">
+            <label id="blLanguageGroup">Select your favorite programming laguage:</label><br />
+            <input type="checkbox" id="GameGroup" name="GameGroup" value="PS4" @(Array.IndexOf(gamegroup.Split(','), "PS4") >= 0 ? "checked":"")/>PS4<br />
+            <input type="checkbox" id="GameGroup" name="GameGroup" value="PC"  @(Array.IndexOf(gamegroup.Split(','), "PC") >= 0 ? "checked":"")/>PC<br />
+            <input type="checkbox" id="GameGroup" name="GameGroup" value="XBOX"  @(Array.IndexOf(gamegroup.Split(','), "XBOX") >= 0 ? "checked":"")/>XBOX<br />
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="offset-1">
+            <button type="submit" id="Button" name="TheButton" value="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" id="Button" name="TheButton" value="Clear" class="btn btn-primary">Clear</button>
+        </div>
+    </div>
+
+
+</form>

@@ -1,0 +1,67 @@
+﻿@{
+    Layout = "~/_Layout1.cshtml";
+    Page.Title = string.Format("Razor - {0}", "RadioButton");
+    var languagegroup = Request.Form[" LanguageGroup"];
+    var scriptgroup = Request.Form[" ScriptGroup"];
+}
+
+@section banner{
+    <h1>RadioButtons on form</h1>
+}
+@if (IsPost)
+{
+    //this is where we process the data that was entered into the form
+    //user must make a choice in each group
+    if (languagegroup.IsEmpty() || scriptgroup.IsEmpty())
+    {
+        <p><span style="color : firebrick">Please Choose one</span></p>
+    }
+    else
+    {
+        if (languagegroup.Equals("C#", StringComparison.OrdinalIgnoreCase))
+        {
+            <p>You will greatly enjoy the CPSC1517 course as we use C#</p>
+        }
+        else
+        {
+            <p>@languagegroup</p>
+        }
+        if (scriptgroup.Equals("C#", StringComparison.OrdinalIgnoreCase))
+        {
+            <p>You will greatly enjoy the CPSC1517 course as we use C#</p>
+        }
+        else
+        {
+            <p>@scriptgroup </p>
+        }
+    }
+}
+else
+{
+    //place initialization code goes here
+}
+
+<form id="theform" method="post">
+    <div class="row">
+        <div class="offset-1">
+            <label id="blLanguageGroup">Select your favorite programming laguage:</label><br />
+            <input type="radio" id="LanguageGroup" name=" LanguageGroup" value="C#"  />C#<br />
+            <input type="radio" id="LanguageGroup" name=" LanguageGroup" value="Python" />Python<br />
+            <input type="radio" id="LanguageGroup" name=" LanguageGroup" value="Java Script" />JavaScript<br />
+            <input type="radio" id="LanguageGroup" name=" LanguageGroup" value="VisualBasic" />VisualBasic<br />
+
+            <label id="blScriptGroup">Select your favorite programming laguage:</label><br />
+            <input type="radio" id="ScriptGroup" name=" ScriptGroup" value="C#" />C#<br />
+            <input type="radio" id="ScriptGroup" name=" ScriptGroup" value="Python" />Python<br />
+            <input type="radio" id="ScriptGroup" name=" ScriptGroup" value="Java Script" />JavaScript<br />
+            <input type="radio" id="ScriptGroup" name=" ScriptGroup" value="VisualBasic" />VisualBasic<br /><br />
+        </div>
+    </div>
+    <div class="row">
+        <div class="offset-1">
+            <button type="submit" id="Button" name="TheButton" value="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+
+
+</form>
