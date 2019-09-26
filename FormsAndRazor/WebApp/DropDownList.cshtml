@@ -1,0 +1,60 @@
+﻿@{
+    Layout = "~/_Layout1.cshtml";
+    Page.Title = string.Format("Razor - {0}", "DropDown List");
+
+}
+@section banner{
+    <h1>DropDown List on Form</h1>
+}
+
+
+@if (IsPost)
+{
+    var choice = Request.Form["CodingSamples"];
+
+    switch (choice)
+    {
+        default:
+            {
+                <p style="color: firebrick">Please Make a selection</p>
+            }
+            break;
+
+        case "TextBox":
+            {
+                // we will use the .Redirect("pagename") methof of the outgoing object Response for page redirection
+                //relative addressing for the page
+                Response.Redirect("Hello_World.cshtml");
+            }
+            break;
+        case "RadioButton":
+            {
+                Response.Redirect("RadioButton.cshtml");
+            }
+            break;
+        case "CheckBox":
+            {
+                Response.Redirect("CheckBox.cshtml");
+            }
+            break;
+    }
+}
+else
+{
+
+}
+
+<form id="theform" method="post">
+    <div class="row">
+        <div class="offset-1">
+            <label id="lbCodingSamples">To view coding, select your sample from the list:</label>&nbsp;&nbsp;
+            <select id="CodingSamples" name="CodingSamples">
+                <option value="">select...</option>
+                <option value="TextBox">TextBoxes</option>
+                <option value="RadioButton">RadioButtons</option>
+                <option value="CheckBox">CheckBoxes</option>
+            </select>
+            <button type="submit" id="TheButton" name="TheButton" value="submit" class="btn btn-primary">Go To...</button>
+        </div>
+    </div>
+</form>

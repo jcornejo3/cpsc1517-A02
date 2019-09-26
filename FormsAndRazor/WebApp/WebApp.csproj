@@ -123,6 +123,7 @@
     <Content Include="basic.cshtml" />
     <Content Include="RadioButton.cshtml" />
     <Content Include="CheckBox.cshtml" />
+    <Content Include="DropDownList.cshtml" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />

@@ -7,6 +7,7 @@
 @section banner{
     <h1>CheckBoxButtons on form</h1>
 }
+
 @if (IsPost)
 {
     var theButton = Request.Form["TheButton"];
@@ -21,18 +22,18 @@
     }
     else
     {
-       
+
         <p>
             I see you're interested in these:
             <ul>
                 @foreach (var platform in gamegroup.Split(','))
-{
+                {
                     <li>@platform</li>
-}
+                }
             </ul>
             So Gey
         </p>
-        
+
 
     }
 }
@@ -46,9 +47,9 @@ else
     <div class="row">
         <div class="offset-1">
             <label id="blLanguageGroup">Select your favorite programming laguage:</label><br />
-            <input type="checkbox" id="GameGroup" name="GameGroup" value="PS4" @(Array.IndexOf(gamegroup.Split(','), "PS4") >= 0 ? "checked":"")/>PS4<br />
-            <input type="checkbox" id="GameGroup" name="GameGroup" value="PC"  @(Array.IndexOf(gamegroup.Split(','), "PC") >= 0 ? "checked":"")/>PC<br />
-            <input type="checkbox" id="GameGroup" name="GameGroup" value="XBOX"  @(Array.IndexOf(gamegroup.Split(','), "XBOX") >= 0 ? "checked":"")/>XBOX<br />
+            <input type="checkbox" id="GameGroup" name="GameGroup" value="PS4" @(Array.IndexOf(gamegroup.Split(','), "PS4") >= 0 ? "checked" : "") />PS4<br />
+            <input type="checkbox" id="GameGroup" name="GameGroup" value="PC" @(Array.IndexOf(gamegroup.Split(','), "PC") >= 0 ? "checked" : "") />PC<br />
+            <input type="checkbox" id="GameGroup" name="GameGroup" value="XBOX" @(Array.IndexOf(gamegroup.Split(','), "XBOX") >= 0 ? "checked" : "") />XBOX<br />
 
         </div>
     </div>
