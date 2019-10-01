@@ -1,0 +1,50 @@
+﻿@{
+    Layout = "~/_Layout1.cshtml";
+    Page.Title = string.Format("Razor - {0}", "WebGrid Display");
+
+    //retrieve athe passed data value
+    // to retrieve the passed data, use .QueryString["lable"]
+    //data is returned as a string
+    var catID = Request.QueryString["catID"];
+
+    // good practice
+    // check that you actually recieve data
+    if(string.IsNullOrEmpty("catID"))
+    {
+        //redirect back to the page to input data
+        Response.Redirect("MultiRecordQuery.cshtml");
+    }
+
+    //Use data to look up products
+    var db = Database.Open("NWDB");
+    var prodquery = @"SELECT ProductID, ProductName, UnitPrice, UnitsInStock, Discontinued 
+                    FROM Products
+                    WHERE CategoryID = @0
+                    ORDER BY ProductName";
+    var prodinfo = db.Query(prodquery, catID);
+
+    //Use data to gey category name for display heading 
+    //yes; you could've passed the category name with the category id
+    // demonstration of using .QueryValue()
+    var catquery = @"SELECT CategoryName 
+                    FROM Categories
+                    WHERE CategoryID = @0";
+    var catname = db.QueryValue(catquery, catID);
+
+
+    //setup display to use the class WebGrid
+
+    //assign the display data to the instance when it is created
+    var gridinstance = new WebGrid(prodinfo);
+
+
+}
+
+@section banner{
+    <h1>WebGrid Display</h1>
+    }
+
+<div class="offset-1">
+    <h3>Products for Category: @catname</h3>
+   @gridinstance.GetHtml()
+</div>
