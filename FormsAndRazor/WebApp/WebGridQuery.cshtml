@@ -6,10 +6,11 @@
     // to retrieve the passed data, use .QueryString["lable"]
     //data is returned as a string
     var catID = Request.QueryString["catID"];
+   
 
     // good practice
     // check that you actually recieve data
-    if(string.IsNullOrEmpty("catID"))
+    if(string.IsNullOrEmpty(catID))
     {
         //redirect back to the page to input data
         Response.Redirect("MultiRecordQuery.cshtml");
@@ -22,6 +23,7 @@
                     WHERE CategoryID = @0
                     ORDER BY ProductName";
     var prodinfo = db.Query(prodquery, catID);
+    
 
     //Use data to gey category name for display heading 
     //yes; you could've passed the category name with the category id
@@ -46,5 +48,14 @@
 
 <div class="offset-1">
     <h3>Products for Category: @catname</h3>
-   @gridinstance.GetHtml()
+   @gridinstance.GetHtml(
+    columns: gridinstance.Columns(
+        gridinstance.Column(columnName:"ProductID", header:"ID"),
+        gridinstance.Column(columnName:"ProductName", header:"Name"),
+        gridinstance.Column(columnName:"UnitPrice", header:"$", canSort:false),
+        gridinstance.Column(columnName:"UnitsInStock", header:"QoH", canSort:false),
+        gridinstance.Column(columnName:"Discontinued", header:"Disc", canSort:false)
+    ))
+    
+<button type="reset" name="theButton" value="clear" id="theButton" ></button>/>
 </div>
