@@ -154,6 +154,7 @@
     <Content Include="_Menu.cshtml" />
     <Content Include="WebConnectionString.config" />
     <Content Include="WebGridQuery.cshtml" />
+    <Content Include="WebGridDestination.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
