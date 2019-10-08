@@ -8,11 +8,10 @@
     @RenderSection("head", required: false)
 </head>
 <body>
-    
     <div class="container-fluid">
         <div class="jumbotron">
             @RenderPage("~/_Menu.cshtml")
-            <b>@RenderSection("banner")</b>
+            @RenderSection("banner")
 
         </div>
         
