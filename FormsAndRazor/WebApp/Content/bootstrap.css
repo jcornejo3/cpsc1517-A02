@@ -40,7 +40,10 @@
 *::after {
   box-sizing: border-box;
 }
-
+input,
+select {
+    margin-bottom: 3px;
+}
 html {
   font-family: sans-serif;
   line-height: 1.15;

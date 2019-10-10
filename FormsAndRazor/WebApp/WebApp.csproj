@@ -133,6 +133,8 @@
     <Content Include="DropDownList.cshtml" />
     <Content Include="MultiRecordQuery.cshtml" />
     <Content Include="CRUDPage.cshtml" />
+    <Content Include="ProductEdit.cshtml" />
+    <Content Include="ProductSearch.cshtml" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
@@ -190,6 +192,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\App_LocalResources\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
