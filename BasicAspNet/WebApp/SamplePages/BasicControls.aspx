@@ -7,7 +7,7 @@
             <td>
                 <asp:TextBox ID="NumberChoice" runat="server" ToolTip="enter 1-4"></asp:TextBox>
                     &nbsp;
-                <asp:Button ID="SubmitNumberChoice" runat="server" Text="Submit" />
+                <asp:Button ID="SubmitNumberChoice" runat="server" Text="Submit" OnClick="SubmitNumberChoice_Click" />
             </td>
             <!--Discussion about SUBMIT BUTTON
                 access the content of a control
@@ -63,7 +63,7 @@
             <td>
                 <asp:DropDownList ID="CollectionChoiceList" runat="server"></asp:DropDownList>
                 &nbsp;&nbsp;
-                <asp:LinkButton ID="CollectionSubmit" runat="server">Selection Submit</asp:LinkButton>
+                <asp:LinkButton ID="CollectionSubmit" runat="server" OnClick="CollectionSubmit_Click">Selection Submit</asp:LinkButton>
             </td>
         </tr>
         <tr>

@@ -197,6 +197,7 @@
     <Compile Include="SamplePages\BasicControls.aspx.designer.cs">
       <DependentUpon>BasicControls.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SamplePages\DDLClass.cs" />
     <Compile Include="SamplePages\HelloWorld.aspx.cs">
       <DependentUpon>HelloWorld.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

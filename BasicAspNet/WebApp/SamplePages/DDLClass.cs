@@ -17,8 +17,9 @@ namespace WebApp.SamplePages
 
         public DDLClass(int valuefield, string displayfield)
         {
-            ValueField = valuefield;
+           
             DisplayField = displayfield;
+            ValueField = valuefield;
         }
 
     }
