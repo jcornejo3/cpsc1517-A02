@@ -61,7 +61,7 @@
             <td align="right">
                 <asp:Label ID="Label4" runat="server" Text="Selection of Course"></asp:Label></td>
             <td>
-                <asp:DropDownList ID="CollectionChoiceList" runat="server" OnSelectedIndexChanged="CollectionChoiceList_SelectedIndexChanged"></asp:DropDownList>
+                <asp:DropDownList ID="CollectionChoiceList" runat="server"></asp:DropDownList>
                 &nbsp;&nbsp;
                 <asp:LinkButton ID="CollectionSubmit" runat="server" OnClick="CollectionSubmit_Click">Selection Submit</asp:LinkButton>
             </td>
