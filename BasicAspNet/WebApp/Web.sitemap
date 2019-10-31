@@ -14,6 +14,10 @@
     <siteMapNode url="" title="-Samples-" description="rooot menu item for dropdown, start dropdown structure">
       <siteMapNode url="~/SamplePages/BasicControls.aspx" title="Basic WebControls"
                     description="sub-menu item to demonstrate common basic web controls" />
+      <siteMapNode url="~/SamplePages/ContestEntry" title="Contest Entry"
+                   description="" />
+      <siteMapNode url="~/SamplePages/JobApplication.aspx" title="Job Application"
+                   description="" />
     </siteMapNode>
     <siteMapNode url="~/Contact.aspx" title="Contact"  description="given" />
     <siteMapNode url="~/About.aspx" title="About"  description="give" />

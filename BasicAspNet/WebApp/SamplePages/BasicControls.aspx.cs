@@ -147,6 +147,13 @@ namespace WebApp.SamplePages
         protected void CollectionSubmit_Click(object sender, EventArgs e)
         {
             MessageLabel.Text = "You pressed the link button selection submit. Ligma Nuts";
+
+            //call out selection ddl 
+            //string dropdownselection = CollectionChoiceList.SelectedValue;
+            //if(string.IsNullOrEmpty(dropdownselection))
+            //{
+            //    MessageLabel.Text = "Ligma Nuts";
+            //}
         }
 
       
