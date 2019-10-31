@@ -52,15 +52,15 @@
                     <asp:ListItem>Shipping/Receiving</asp:ListItem>
 
                 </asp:CheckBoxList>
-
-            
-                <asp:Button ID="Submit" runat="server" Text="Submit" OnClick="Submit_Click" />&nbsp;&nbsp;
-                <asp:Button ID="clear" runat="server" Text="Clear" height="26px" width="63px" OnClick="Clear_Click" /><br />
-                <asp:Label ID="Message" runat="server" ></asp:Label>
-            
             </fieldset>
         </div>
-        
+        <div class="col-sm-6">
+            <asp:Button ID="Submit" runat="server" Text="Submit" OnClick="Submit_Click" />&nbsp;&nbsp;
+            <asp:Button ID="clear" runat="server" Text="Clear" height="26px" width="63px" OnClick="Clear_Click" /><br />
+            <asp:Label ID="Message" runat="server" ></asp:Label>
+            <br /><br />
+            <asp:GridView ID="JobApplicationList" runat="server"></asp:GridView>
+        </div>
     </div>
     <script src="../Scripts/bootwrap-freecode.js"></script>
 </asp:Content>

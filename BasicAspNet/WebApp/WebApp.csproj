@@ -223,6 +223,7 @@
     <Compile Include="SamplePages\JobApplication.aspx.designer.cs">
       <DependentUpon>JobApplication.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SamplePages\JobApps.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
