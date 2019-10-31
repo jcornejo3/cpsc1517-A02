@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="JobApplication.aspx.cs" Inherits="WebApp.SamplePages.JobApplication" %>
+﻿<%@ Page Title="Job Application" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="JobApplication.aspx.cs" Inherits="WebApp.SamplePages.JobApplication" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
      <h3>Job Application Form</h3>
     <div class="row">
@@ -19,15 +19,16 @@
     <%--create a 2 column form--%>
     <div class="row">
         <div class="col-sm-6">
+            <!-- Always contain controlls in a field set-->
             <fieldset class="form-horizontal">
                 <legend>Job Application Form</legend> 
                 <asp:Label ID="Label1" runat="server" Text="Name"
                      AssociatedControlID="FullName"></asp:Label>
-                <asp:TextBox ID="FullName" runat="server"></asp:TextBox>
+                <asp:TextBox ID="FullName" runat="server" Width="125px"></asp:TextBox>
 
                 <asp:Label ID="Label2" runat="server" Text="Email"
                      AssociatedControlID="EmailAddress"></asp:Label>
-                <asp:TextBox ID="EmailAddress" runat="server"></asp:TextBox>
+                <asp:TextBox ID="EmailAddress" runat="server" Width="125px"></asp:TextBox>
 
                 <asp:Label ID="Label3" runat="server" Text="Phone"
                      AssociatedControlID="PhoneNumber"></asp:Label>
@@ -49,6 +50,7 @@
                     <asp:ListItem>Manufacturing</asp:ListItem>
                     <asp:ListItem>Accounting</asp:ListItem>
                     <asp:ListItem>Shipping/Receiving</asp:ListItem>
+
                 </asp:CheckBoxList>
             </fieldset>
         </div>
@@ -58,5 +60,5 @@
             <asp:Label ID="Message" runat="server" ></asp:Label>
         </div>
     </div>
- 
+    <script src="../Scripts/bootwrap-freecode.js"></script>
 </asp:Content>
