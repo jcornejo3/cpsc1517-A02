@@ -72,6 +72,7 @@
                <br />
                <asp:CheckBox ID="Terms" runat="server" Text="I agree to the terms of the contest" />
                <asp:HyperLink ID="TermsAndCondition" runat="server">Terms and conditions</asp:HyperLink>
+               
            </p>
 
             <p>
@@ -86,11 +87,13 @@
         <div class="col-md-6">   
             <div class="col-md-offset-2">
                 <p>
-                    <asp:Button ID="Submit" runat="server" Text="Submit" />&nbsp;&nbsp;
-                    <asp:Button ID="Clear" runat="server" Text="Clear" CausesValidation="true"  />
+                    <asp:Button ID="Submit" runat="server" Text="Submit" OnClick="Submit_Click" />&nbsp;&nbsp;
+                    <asp:Button ID="Clear" runat="server" Text="Clear" CausesValidation="true" OnClick="Clear_Click"  />
                 </p>
-                <asp:Label ID="Message" runat="server" ></asp:Label><br />
-            
+                <asp:Label ID="Message" runat="server" ></asp:Label>
+                <br />
+                 <br />
+                <asp:GridView ID="EntrieList" runat="server"></asp:GridView>
             </div>
         </div>
     </div>
