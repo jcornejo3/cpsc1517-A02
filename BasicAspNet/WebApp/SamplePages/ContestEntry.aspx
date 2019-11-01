@@ -20,6 +20,8 @@
         They could be placed beside the appropriate input field
         HOWEVER this ould cause bootwrap to fail
         THEREFORE the controls will be grouped before the form--%>
+    <div class="row col-md-12">
+        <div class="alert alert-danger">
     <asp:CompareValidator ID="CompareCheckAnswer" runat="server" ErrorMessage="Check Answer: DataType Compare" Display="None" ForeColor="#CC3300" ControlToValidate="CheckAnswer" Operator="DataTypeCheck" Type="Integer"></asp:CompareValidator>
 
 
@@ -32,17 +34,19 @@
     <asp:RequiredFieldValidator ID="RequiredCity" runat="server" ErrorMessage="Enter a City" SetFocusOnError="True" ControlToValidate="City" Text="*" Display="None" ForeColor="#CC3300"></asp:RequiredFieldValidator>
 
     <asp:RequiredFieldValidator ID="RequiredPostalCode" runat="server" ErrorMessage="Enter a PostalCode" Display="None" ControlToValidate="PostalCode" ForeColor="#CC3300"></asp:RequiredFieldValidator>
-    <asp:RegularExpressionValidator ID="RegExPostalCode1" runat="server" ErrorMessage="Invalid PostalCode Format (T6Y7U0)" Display="None" ForeColor="#CC3300" ControlToValidate="PostalCode" Text="*" ValidationExpression="[a-zA-Z][0-9][a-zA-Z]-[0-9][a-zA-Z][0-9]" SetFocusOnError="True"></asp:RegularExpressionValidator>
+    <asp:RegularExpressionValidator ID="RegExPostalCode1" runat="server" ErrorMessage="Invalid PostalCode Format (T6Y7U0)" Display="None" ForeColor="#CC3300" ControlToValidate="PostalCode" Text="*" ValidationExpression="[a-zA-Z][0-9][a-zA-Z][0-9][a-zA-Z][0-9]" SetFocusOnError="True"></asp:RegularExpressionValidator>
 
     
     <asp:RequiredFieldValidator ID="RequiredEmai" runat="server" ErrorMessage="Enter an Email Address" BorderStyle="None" Display="None" Text="*" ControlToValidate="EmailAddress" ForeColor="#CC3300"></asp:RequiredFieldValidator>
     <asp:RegularExpressionValidator ID="RegExEmailAddress" runat="server" ErrorMessage="Invalid email @email.com" Display="None" ForeColor="#CC3300" ControlToValidate="EmailAddress" Text="*" ValidationExpression="^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$" SetFocusOnError="True"></asp:RegularExpressionValidator>
     
     <%--Sample of a range validation using the nullable field StreetAddress 2--%>
-    <asp:RangeValidator ID="RangeStreetAddress2" ErrorMessage="Street Address 2 is limited to a number between 0 and 100" Display="None", ForeColor="#990000" SetFocusOnError="true" ControlToValidate="StreetAddress2" MinimumValue="0" MaximumValue="100" Type="Integer" runat="server" />
+    <asp:RangeValidator ID="RangeStreetAddress2" ErrorMessage="Street Address 2 is limited to a number between 0 and 100" Display="None" ForeColor="#990000" SetFocusOnError="true" ControlToValidate="StreetAddress2" MinimumValue="0" MaximumValue="100" Type="Integer" runat="server" />
     <%--Validation summary control to display the validation--%>
 
     <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
+    </div>
+        </div>
     <div class="row">
         <div class ="col-md-6">
             <fieldset class="form-horizontal">
@@ -119,7 +123,7 @@
                 <asp:Label ID="Message" runat="server" ></asp:Label>
                 <br /> <br />
                
-                <asp:GridView ID="EntrieList" runat="server"></asp:GridView>
+                <asp:GridView ID="EntryList" runat="server"></asp:GridView>
             </div>
         </div>
     </div>

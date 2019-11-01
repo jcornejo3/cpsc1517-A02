@@ -27,7 +27,7 @@ namespace WebApp
             StreetAddress1 = streetaddres1;
             StreetAddress2 = streetaddress2;
             City = city;
-            Province = province
+            Province = province;
             PostalCode = postalcode;
             EmailAddress = emailaddress;
         }

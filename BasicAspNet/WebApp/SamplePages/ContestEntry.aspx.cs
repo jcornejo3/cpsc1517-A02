@@ -54,6 +54,8 @@ namespace WebApp.SamplePages
                                             Province.SelectedValue,
                                             PostalCode.Text,
                                             EmailAddress.Text));
+                    EntryList.DataSource = Entries;
+                    EntryList.DataBind();
                 }
                 else
                 {
