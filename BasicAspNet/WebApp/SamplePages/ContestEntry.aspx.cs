@@ -35,7 +35,7 @@ namespace WebApp.SamplePages
             City.Text = "";
             PostalCode.Text = "";
             EmailAddress.Text = "";
-           
+
         }
     }
 }

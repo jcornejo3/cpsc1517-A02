@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ContestEntry.aspx.cs" Inherits="WebApp.SamplePages.ContestEntry" %>
+﻿<%@ Page Title="Contest Entries" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ContestEntry.aspx.cs" Inherits="WebApp.SamplePages.ContestEntry" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="page-header">
         <h1>Contest Entry</h1>
@@ -16,7 +16,33 @@
 
         </div>
     </div>
-  
+    <%-- Validation controls:
+        They could be placed beside the appropriate input field
+        HOWEVER this ould cause bootwrap to fail
+        THEREFORE the controls will be grouped before the form--%>
+    <asp:CompareValidator ID="CompareCheckAnswer" runat="server" ErrorMessage="Check Answer: DataType Compare" Display="None" ForeColor="#CC3300" ControlToValidate="CheckAnswer" Operator="DataTypeCheck" Type="Integer"></asp:CompareValidator>
+
+
+    <asp:RequiredFieldValidator ID="RequiredFirstName" runat="server" ErrorMessage="Please enter your First Name" Display="None" ForeColor="#FF3300" Font-Bold="True" SetFocusOnError="True" ToolTip="eg. Joe " ControlToValidate="FirstName">*</asp:RequiredFieldValidator>
+
+    <asp:RequiredFieldValidator ID="RequiredLastName" runat="server" ErrorMessage="Please enter your Last Name" Display="None" ForeColor="#CC3300" Font-Bold="True" ControlToValidate="LastName" SetFocusOnError="True" ToolTip="eg. Momma">*</asp:RequiredFieldValidator>
+
+    <asp:RequiredFieldValidator ID="RequiredStreet1" runat="server" ErrorMessage="Enter a Street Address" Display="None" Text="*" ControlToValidate="StreetAddress1" SetFocusOnError="True" ForeColor="#CC3300"></asp:RequiredFieldValidator>
+    
+    <asp:RequiredFieldValidator ID="RequiredCity" runat="server" ErrorMessage="Enter a City" SetFocusOnError="True" ControlToValidate="City" Text="*" Display="None" ForeColor="#CC3300"></asp:RequiredFieldValidator>
+
+    <asp:RequiredFieldValidator ID="RequiredPostalCode" runat="server" ErrorMessage="Enter a PostalCode" Display="None" ControlToValidate="PostalCode" ForeColor="#CC3300"></asp:RequiredFieldValidator>
+    <asp:RegularExpressionValidator ID="RegExPostalCode1" runat="server" ErrorMessage="Invalid PostalCode Format (T6Y7U0)" Display="None" ForeColor="#CC3300" ControlToValidate="PostalCode" Text="*" ValidationExpression="[a-zA-Z][0-9][a-zA-Z]-[0-9][a-zA-Z][0-9]" SetFocusOnError="True"></asp:RegularExpressionValidator>
+
+    
+    <asp:RequiredFieldValidator ID="RequiredEmai" runat="server" ErrorMessage="Enter an Email Address" BorderStyle="None" Display="None" Text="*" ControlToValidate="EmailAddress" ForeColor="#CC3300"></asp:RequiredFieldValidator>
+    <asp:RegularExpressionValidator ID="RegExEmailAddress" runat="server" ErrorMessage="Invalid email @email.com" Display="None" ForeColor="#CC3300" ControlToValidate="EmailAddress" Text="*" ValidationExpression="^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$" SetFocusOnError="True"></asp:RegularExpressionValidator>
+    
+    <%--Sample of a range validation using the nullable field StreetAddress 2--%>
+    <asp:RangeValidator ID="RangeStreetAddress2" ErrorMessage="Street Address 2 is limited to a number between 0 and 100" Display="None", ForeColor="#990000" SetFocusOnError="true" ControlToValidate="StreetAddress2" MinimumValue="0" MaximumValue="100" Type="Integer" runat="server" />
+    <%--Validation summary control to display the validation--%>
+
+    <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
     <div class="row">
         <div class ="col-md-6">
             <fieldset class="form-horizontal">
@@ -91,8 +117,8 @@
                     <asp:Button ID="Clear" runat="server" Text="Clear" CausesValidation="true" OnClick="Clear_Click"  />
                 </p>
                 <asp:Label ID="Message" runat="server" ></asp:Label>
-                <br />
-                 <br />
+                <br /> <br />
+               
                 <asp:GridView ID="EntrieList" runat="server"></asp:GridView>
             </div>
         </div>

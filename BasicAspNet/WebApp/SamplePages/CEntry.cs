@@ -9,8 +9,8 @@ namespace WebApp
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string StreetAddres1 { get; set; }
-        public string StreetAddres2 { get; set; }
+        public string StreetAddress1 { get; set; }
+        public string StreetAddress2 { get; set; }
         public string City { get; set; }
         public string PostalCode{ get; set; }
         public string EmailAddress { get; set; }
@@ -22,8 +22,8 @@ namespace WebApp
         {
             FirstName = firstname;
             LastName = lastname;
-            StreetAddres1 = streetaddres1;
-            StreetAddres2 = streetaddress2;
+            StreetAddress1 = streetaddres1;
+            StreetAddress2 = streetaddress2;
             City = city;
             PostalCode = postalcode;
             EmailAddress = emailaddress;
