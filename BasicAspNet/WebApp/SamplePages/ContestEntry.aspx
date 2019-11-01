@@ -71,6 +71,7 @@
            <p>Note: You must agree to the contest terms in order to be entered.
                <br />
                <asp:CheckBox ID="Terms" runat="server" Text="I agree to the terms of the contest" />
+               <asp:HyperLink ID="TermsAndCondition" runat="server">Terms and conditions</asp:HyperLink>
            </p>
 
             <p>

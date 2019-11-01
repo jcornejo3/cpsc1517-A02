@@ -166,6 +166,15 @@ namespace WebApp.SamplePages {
         protected global::System.Web.UI.WebControls.CheckBox Terms;
         
         /// <summary>
+        /// TermsAndCondition control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink TermsAndCondition;
+        
+        /// <summary>
         /// CheckAnswer control.
         /// </summary>
         /// <remarks>
