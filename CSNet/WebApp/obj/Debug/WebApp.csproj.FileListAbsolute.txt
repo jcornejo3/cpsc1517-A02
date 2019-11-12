@@ -73,3 +73,9 @@ C:\Users\jcornejo3\Documents\GitHub\cpsc1517-A02\CSNet\WebApp\obj\Debug\WebApp.c
 C:\Users\jcornejo3\Documents\GitHub\cpsc1517-A02\CSNet\WebApp\obj\Debug\WebApp.csproj.CopyComplete
 C:\Users\jcornejo3\Documents\GitHub\cpsc1517-A02\CSNet\WebApp\obj\Debug\WebApp.dll
 C:\Users\jcornejo3\Documents\GitHub\cpsc1517-A02\CSNet\WebApp\obj\Debug\WebApp.pdb
+C:\Users\jcornejo3\Documents\GitHub\cpsc1517-A02\CSNet\WebApp\bin\System.Net.Http.Formatting.dll
+C:\Users\jcornejo3\Documents\GitHub\cpsc1517-A02\CSNet\WebApp\bin\System.Web.Http.dll
+C:\Users\jcornejo3\Documents\GitHub\cpsc1517-A02\CSNet\WebApp\bin\System.Web.Http.WebHost.dll
+C:\Users\jcornejo3\Documents\GitHub\cpsc1517-A02\CSNet\WebApp\bin\System.Net.Http.Formatting.xml
+C:\Users\jcornejo3\Documents\GitHub\cpsc1517-A02\CSNet\WebApp\bin\System.Web.Http.xml
+C:\Users\jcornejo3\Documents\GitHub\cpsc1517-A02\CSNet\WebApp\bin\System.Web.Http.WebHost.xml

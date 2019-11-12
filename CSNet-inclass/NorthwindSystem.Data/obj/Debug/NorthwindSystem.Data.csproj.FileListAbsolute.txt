@@ -1,0 +1,12 @@
+C:\Users\dwelch\Documents\GitHub\cpsc1517A02\CSNet\NorthwindSystem.Data\bin\Debug\NorthwindSystem.Data.dll
+C:\Users\dwelch\Documents\GitHub\cpsc1517A02\CSNet\NorthwindSystem.Data\bin\Debug\NorthwindSystem.Data.pdb
+C:\Users\dwelch\Documents\GitHub\cpsc1517A02\CSNet\NorthwindSystem.Data\obj\Debug\NorthwindSystem.Data.csprojAssemblyReference.cache
+C:\Users\dwelch\Documents\GitHub\cpsc1517A02\CSNet\NorthwindSystem.Data\obj\Debug\NorthwindSystem.Data.csproj.CoreCompileInputs.cache
+C:\Users\dwelch\Documents\GitHub\cpsc1517A02\CSNet\NorthwindSystem.Data\obj\Debug\NorthwindSystem.Data.dll
+C:\Users\dwelch\Documents\GitHub\cpsc1517A02\CSNet\NorthwindSystem.Data\obj\Debug\NorthwindSystem.Data.pdb
+C:\Users\jcornejo3\Desktop\CSNet\NorthwindSystem.Data\bin\Debug\NorthwindSystem.Data.dll
+C:\Users\jcornejo3\Desktop\CSNet\NorthwindSystem.Data\bin\Debug\NorthwindSystem.Data.pdb
+C:\Users\jcornejo3\Desktop\CSNet\NorthwindSystem.Data\obj\Debug\NorthwindSystem.Data.csprojAssemblyReference.cache
+C:\Users\jcornejo3\Desktop\CSNet\NorthwindSystem.Data\obj\Debug\NorthwindSystem.Data.csproj.CoreCompileInputs.cache
+C:\Users\jcornejo3\Desktop\CSNet\NorthwindSystem.Data\obj\Debug\NorthwindSystem.Data.dll
+C:\Users\jcornejo3\Desktop\CSNet\NorthwindSystem.Data\obj\Debug\NorthwindSystem.Data.pdb
