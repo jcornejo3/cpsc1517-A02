@@ -1,0 +1,107 @@
+﻿@{
+    Layout = "~/_Layout1.cshtml";
+    Page.Title = string.Format("Razor - {0}", "SimplePropertyEntry PKey Query");
+
+    //output variables
+    string regionid = "";
+    string regionDesciption = "";
+
+    //input variables
+    var regionarg = Request.Form["RegionArg"];
+    var thebutton = Request.Form["theButton"];
+
+    if(string.IsNullOrEmpty(regionarg))
+    {
+        regionarg = "0";
+    }
+
+    //this page will access the database
+    // Microsoft.Aspnet.WebPages.WebData
+    //Microsoft.Aspnet.Webpages.Data
+
+    //connect to the database
+
+    //use the name attribute of my web connection string
+    var db = Database.Open("NWDB");
+
+
+    var sqlcommand = @"SELECT RegionID, RegionDescription FROM Region WHERE RegionID = @0";
+    //3 ways to execute a query
+    //a) a single row .QuerySingle(command [,list of arg])
+    //b) 0, 1 or more records .Query(command [, list of arg])
+    //c) a single value .QueryValue(command [, list of arg])
+
+    var results = db.QuerySingle(sqlcommand, regionarg);
+}
+
+@section banner{
+    <h1>Database PKey Query</h1>
+    }
+
+@if (IsPost)
+{
+    if(thebutton.Equals("reset"))
+    {
+        regionarg = "";
+        regionid = "";
+        regionDesciption = "";
+    }
+    else
+    {
+        //always check if you even have results
+
+        //checking for query results depend on how the query was executed
+        //a) and c) check for null
+        //b) check the .Count of the results
+        if(results == null)
+        {
+            <p>There is no region for yourid:</p>
+            regionid = "";
+            regionDesciption = "";
+        }
+        else
+        {
+            <p>Found</p>
+
+            //accesing the data out of your results
+            // there are two ways to access data on a result row
+
+            //a) using an index     syntax result[index] where index value starts at 0 which is the first colun on the select
+            //b) using the property name    syntax result.PropertyName where the property name is the column title
+
+            //data retuned has a data type that matches the Property
+
+            regionid = results[0].ToString();
+            regionDesciption = results.RegionDescription;
+
+        }
+
+    }
+}
+else
+{
+    regionarg = "";
+}
+
+<form id="theform" method="post">
+    <div class="row">
+        <div class="col-6">
+            <div class="offset-1">
+                <label id="lblRegionArg">Enter a Region ID</label>&nbsp;&nbsp;             
+                <input type="number" step="1" min="1" id="RegionArg" name="RegionArg" value="@regionarg" placeholder="Region ID" />
+                <br /><br />
+                <button type="submit" id="theButton" name="theButton" value="submit" class="btn btn-primary">Fetch</button>&nbsp;&nbsp;
+                <button type="reset" id="theButton" name="theButton" value="clear" class="btn btn-danger">Reset</button>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="offset-1">
+                <label id="lblRegionID">RegionID:</label>&nbsp;&nbsp;   
+                <input type="text" id="RegionID" name="RegionID" value="@regionid" readonly />
+                <br /><br />
+                <label id="lblRegionDescription">RegionID</label>&nbsp;&nbsp;
+                <input type="text" id="RegionDescription" name="RegionDescription" value="@regionDesciption" readonly/>
+            </div>
+        </div>
+    </div>
+</form>

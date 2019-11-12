@@ -1,0 +1,9 @@
+C:\Users\jcornejo3\Documents\GitHub\cpsc1517-A02\CSNet\NorthWindSystem\bin\Debug\NorthWindSystem.dll
+C:\Users\jcornejo3\Documents\GitHub\cpsc1517-A02\CSNet\NorthWindSystem\bin\Debug\NorthWindSystem.pdb
+C:\Users\jcornejo3\Documents\GitHub\cpsc1517-A02\CSNet\NorthWindSystem\bin\Debug\NorthwindSystem.Data.dll
+C:\Users\jcornejo3\Documents\GitHub\cpsc1517-A02\CSNet\NorthWindSystem\bin\Debug\NorthwindSystem.Data.pdb
+C:\Users\jcornejo3\Documents\GitHub\cpsc1517-A02\CSNet\NorthWindSystem\obj\Debug\NorthWindSystem.csprojAssemblyReference.cache
+C:\Users\jcornejo3\Documents\GitHub\cpsc1517-A02\CSNet\NorthWindSystem\obj\Debug\NorthWindSystem.csproj.CoreCompileInputs.cache
+C:\Users\jcornejo3\Documents\GitHub\cpsc1517-A02\CSNet\NorthWindSystem\obj\Debug\NorthWindSystem.csproj.CopyComplete
+C:\Users\jcornejo3\Documents\GitHub\cpsc1517-A02\CSNet\NorthWindSystem\obj\Debug\NorthWindSystem.dll
+C:\Users\jcornejo3\Documents\GitHub\cpsc1517-A02\CSNet\NorthWindSystem\obj\Debug\NorthWindSystem.pdb

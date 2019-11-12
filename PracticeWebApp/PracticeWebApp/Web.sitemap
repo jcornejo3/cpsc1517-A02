@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="" title=""  description="">
+    <siteMapNode url="~/About.aspx" title="About"  description="About Page" />
+    <siteMapNode url="~/Default.aspx" title="Description"  description="Description Page" />
+    <!--Create a DropDown list for practice forms-->
+    <siteMapNode url="" title="Forms" description="Practice forms">
+      <siteMapNode url="~/Practice-Forms/UserRegistration.aspx" title="User-Registration" description="User Registration page"/>
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>
